@@ -1,0 +1,20 @@
+default:
+  paths:
+    rna_data: "data/raw/gene_expression.csv"  # RENAME YOUR FILE TO THIS
+    label: "data/raw/labels.csv"         # RENAME YOUR FILE TO THIS
+  
+  preprocessing:
+    log_offset: 0.25
+    var_threshold_quantile: 0.8  # Top 20% variance
+  
+  clustering:
+    pca_components: 5
+    kmeans_k: 5
+    kmeans_nstart: 25
+  
+  modeling:
+    seed: 1318916
+    train_fraction: 0.80         # 80/20 Split
+    cv_folds: 5
+    elastic_net_alpha_grid: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+    n_cores: 7                  # Adjust based on your machine
