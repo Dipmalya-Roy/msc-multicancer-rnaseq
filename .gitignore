@@ -3,3 +3,7 @@
 .RData
 .Ruserdata
 data/raw/
+data/processed/
+data/splits/
+models/
+results/tables/*.csv

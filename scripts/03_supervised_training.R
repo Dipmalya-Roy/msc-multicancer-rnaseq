@@ -76,7 +76,8 @@ message("✅ Selected features saved to models/selected_genes_elasticnet.rds")
 # Subset Training Data to ONLY the final selected features
 x_train_final <- x_train_scaled[, final_features, drop=FALSE]
 train_df_final <- data.frame(Class = y_train, x_train_final)
-
+# ---> ADD THIS LINE: Reset the parallel backend so caret doesn't crash <---
+registerDoSEQ()
 # Setup Cross-Validation for all models
 ctrl <- trainControl(
   method = "cv", 

@@ -8,13 +8,16 @@ required_packages <- c(
   "factoextra",   # Clustering visualization
   "cluster",      # Clustering algorithms
   "ggplot2",      # Standard plotting
+  "ggrepel",      # Plot text spacing
   "caret",        # Machine Learning workflow
   "glmnet",       # Elastic Net feature selection
   "doParallel",   # Parallel processing
-  "e1071",        # SVM
+  "e1071",        # SVM base
+  "kernlab",      # SVM radial kernel backend
   "randomForest", # Random Forest
   "MASS",         # GDA/LDA
   "pROC",         # ROC and AUC calculations
+  "MLmetrics",    # Advanced metrics calculation
   "testthat"      # Unit testing
 )
 
